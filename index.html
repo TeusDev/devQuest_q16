@@ -10,17 +10,49 @@
     <title>DevQuest - JS - D16</title>
 </head>
 
-<body>
-    <div class="images" id="source" style="background: url(src/img/1i.png);">
-        <img onclick="switchImage(0)" class="go left" src="./src/img/seta.svg" alt="seta de controle do slide">
-        <div class="content">
-            <h1 id="title"></h1>
-            <p id="text"></p>
-            <a href="#" id="button" style="color: #c50000;">Saiba mais</a>
+<body class="preload">
+    <div class="images">
+
+        <div class="image">
+            <div class="content">
+                <h1>Titulo imagem 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat a e</p>
+                <a href="#" style="color: #c50000;">Saiba mais</a>
+            </div>
         </div>
-        <img onclick="switchImage(1)" class="go right" src="src/img/seta.svg" alt="seta de controle do slide">
+
+        <div class="image">
+            <div class="content">
+                <h1>Titulo imagem 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat a e</p>
+                <a href="#" style="color: #D9DD10;">Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="content">
+                <h1>Titulo imagem 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat a e</p>
+                <a href="#" style="color: #A63A17;">Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="content">
+                <h1>Titulo imagem 4</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat a e</p>
+                <a href="#" style="color: #10ACDD;">Saiba mais</a>
+            </div>
+        </div>
+
+        <img onclick="switchImage(0)" class="go left" style="transform: scaleX(-1) translateX(50%);" src="./src/img/seta.svg" alt="seta de controle do slide">
+
+        <img onclick="switchImage(1)" class="go right" style="transform: translateX(50%);" src="src/img/seta.svg" alt="seta de controle do slide">
+
     </div>
+
     <script src="src/js/index.js"></script>
+    <script>document.body.classList.remove("preload")</script>
 </body>
 
 </html>
