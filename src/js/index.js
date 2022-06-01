@@ -2,7 +2,10 @@ let pos = 1;
 
 let disabled = true;
 
-switchImage(-1);
+function preload(source, idx) {
+	document.getElementById("source").style.background = source[idx - 1].source;
+	console.log("Done img: " + idx);
+}
 
 function switchImage(num) {
 	let images = [
@@ -44,9 +47,7 @@ function switchImage(num) {
 		return console.log("Ei, PARADO! " + num);
 	} else if (num == -1) {
 		for (let index = 1; index <= images.length; index++) {
-			document.getElementById("source").style.background =
-				images[index - 1].source;
-			console.log("Done img: " + index);
+			preload(images, index);
 		}
 	}
 
@@ -79,3 +80,5 @@ function switchImage(num) {
 	document.getElementById("text").textContent = images[pos - 1].text;
 	document.getElementById("button").style.color = images[pos - 1].buttonColor;
 }
+
+switchImage(-1);
