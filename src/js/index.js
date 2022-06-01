@@ -1,4 +1,5 @@
 let pos = 1;
+
 let disabled = true;
 
 switchImage(-1);
@@ -41,6 +42,12 @@ function switchImage(num) {
 		pos--;
 	} else if (num != -1) {
 		return console.log("Ei, PARADO! " + num);
+	} else if (num == -1) {
+		for (let index = 1; index <= images.length; index++) {
+			document.getElementById("source").style.background =
+				images[index - 1].source;
+			console.log("Done img: " + index);
+		}
 	}
 
 	const arrows = document.querySelectorAll(".go");
